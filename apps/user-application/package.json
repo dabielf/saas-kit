@@ -3,11 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite dev --port 3000",
+    "dev": "vite dev --port 3000 --mode development",
     "build": "vite build",
+    "build:check": "vite build && tsc",
     "deploy": "pnpm run build && wrangler deploy",
     "serve": "vite preview",
-    "cf-typegen": "wrangler types --env-interface Env"
+    "cf-typegen": "wrangler types --env-interface Env --env stage",
+    "stage:deploy": "pnpm run build && wrangler deploy"
   },
   "dependencies": {
     "@polar-sh/sdk": "^0.34.17",

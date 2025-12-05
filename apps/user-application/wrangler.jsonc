@@ -1,10 +1,29 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "tanstack-start-app",
+  "name": "saas-kit-user-app",
   "compatibility_date": "2025-09-02",
   "compatibility_flags": ["nodejs_compat"],
   "main": "./src/server.ts",
-  "vars": {
-    "MY_VAR": "Hello from Cloudflare",
-  },
+  "env" :{
+		"stage": {
+        "vars": {
+          "MY_VAR": "Hello from Cloudflare",
+        },
+			"d1_databases": [
+				{
+					"binding": "DB",
+          //TODO: Change this to your database ID
+					"database_id": "bccc5633-a7e4-4b66-a01a-f09c6298c323",
+					"remote": true
+				}
+			],
+			"services": [
+				{
+					"binding": "BACKEND_SERVICE",
+					"service": "saas-kit-data-service-stage",
+					"remote": true
+				}
+			]
+		}
+	}
 }

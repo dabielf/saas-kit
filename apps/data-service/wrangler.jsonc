@@ -12,4 +12,78 @@
   "observability": {
     "enabled": true,
   },
+  "env": {
+		"stage": {
+			"d1_databases": [
+				{
+					"binding": "DB",
+          //TODO: Change this to your database ID
+					"database_id": "bccc5633-a7e4-4b66-a01a-f09c6298c323",
+					"remote": true
+				}
+			],
+			// "kv_namespaces": [
+			// 	{
+			// 		"binding": "CACHE",
+			// 		"id": "<kv_id>",
+			// 		"remote": true
+			// 	}
+			// ],
+			// "queues": {
+			// 	"consumers": [
+			// 		{
+			// 			"queue": "<queue_name>"
+			// 		}
+			// 	],
+			// 	"producers": [
+			// 		{
+			// 			"binding": "QUEUE",
+			// 			"queue": "<queue_name>"
+			// 		}
+			// 	]
+			// },
+			// "workflows": [
+			// 	{
+			// 		"binding": "DESTINATION_EVALUATION_WORKFLOW",
+			// 		"name": "destination-evaluation-workflow",
+			// 		"class_name": "DestinationEvaluationWorkflow"
+			// 	}
+			// ],
+			// "browser": {
+			// 	"binding": "VIRTUAL_BROWSER"
+			// },
+			// "ai": {
+			// 	"binding": "AI"
+			// },
+			// "r2_buckets": [
+			// 	{
+			// 		"binding": "BUCKET",
+			// 		"bucket_name": "<bucket_name>",
+			// 		"remote": true
+			// 	}
+			// ],
+			// "durable_objects": {
+			// 	"bindings": [
+			// 		{
+			// 			"name": "<durable_object_name>",
+			// 			"class_name": "<durable_object_class_name>"
+			// 		},
+			// 		{
+			// 			"name": "<durable_object_name>",
+			// 			"class_name": "<durable_object_class_name>"
+			// 		}
+			// 	]
+			// },
+			// "migrations": [
+			// 	{
+			// 		"tag": "v1",
+			// 		"new_classes": ["<class_name>"]
+			// 	},
+			// 	{
+			// 		"tag": "v2",
+			// 		"new_sqlite_classes": ["<class_name>"]
+			// 	}
+			// ]
+		}
+	}
 }

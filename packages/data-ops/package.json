@@ -22,7 +22,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json --outDir ./dist && tsc-alias",
-    "better-auth:generate": "mkdir -p src/drizzle && npx @better-auth/cli@latest generate --config ./config/auth.ts --output ./src/drizzle/auth-schema.ts",
+    "better-auth:generate": "mkdir -p src/drizzle-out && npx @better-auth/cli@latest generate --config ./config/auth.ts --output ./src/drizzle-out/auth-schema.ts",
     "drizzle:generate": "drizzle-kit generate --config drizzle.config.ts",
     "drizzle:migrate": "drizzle-kit migrate --config drizzle.config.ts",
     "drizzle:pull": "drizzle-kit pull --config drizzle.config.ts"

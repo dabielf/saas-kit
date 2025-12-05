@@ -19,30 +19,6 @@ Set up the required environment variables for authentication. You'll need a secr
 
 Generate a secure secret key using: `openssl rand -base64 32`
 
-### PostgreSQL Configuration
-
-```bash
-# packages/data-ops/.env
-# Auth Environment Variables
-BETTER_AUTH_SECRET="your-secret-key-here"
-
-# Google OAuth (optional)
-GOOGLE_CLIENT_ID="your-google-client-id"
-GOOGLE_CLIENT_SECRET="your-google-client-secret"
-```
-
-### MySQL Configuration
-
-```bash
-# packages/data-ops/.env
-# Auth Environment Variables
-BETTER_AUTH_SECRET="your-secret-key-here"
-
-# Google OAuth (optional)
-GOOGLE_CLIENT_ID="your-google-client-id"
-GOOGLE_CLIENT_SECRET="your-google-client-secret"
-```
-
 ### Cloudflare D1 Configuration
 
 ```bash
