@@ -17,4 +17,8 @@ export class ExampleDurableObject extends DurableObject {
     await this.ctx.storage.put("savedData", data);
     this.savedData = data;
   }
+
+  async getData(): Promise<string | undefined> {
+    return this.savedData;
+  }
 }

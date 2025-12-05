@@ -75,6 +75,14 @@
 			// 		}
 			// 	]
 			// },
+			"durable_objects": {
+				"bindings": [
+					{
+						"name": "EXAMPLE_DURABLE_OBJECT",
+						"class_name": "ExampleDurableObject"
+					}
+				]
+			},
 			// "migrations": [
 			// 	{
 			// 		"tag": "v1",
@@ -85,6 +93,12 @@
 			// 		"new_sqlite_classes": ["<class_name>"]
 			// 	}
 			// ]
+			"migrations": [
+				{
+					"tag": "v1",
+					"new_classes": ["ExampleDurableObject"]
+				}
+			]
 		},
     "production": {
 			"d1_databases": [
