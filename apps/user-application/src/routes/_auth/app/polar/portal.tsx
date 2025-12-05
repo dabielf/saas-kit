@@ -12,6 +12,7 @@ export const Route = createFileRoute("/_auth/app/polar/portal")({
           accessToken: env.POLAR_SECRET,
           server: "sandbox",
         });
+        console.log("ctx.context.userId", ctx.context.userId);
         const customerSession = await polar.customerSessions.create({
           externalCustomerId: ctx.context.userId,
         });
