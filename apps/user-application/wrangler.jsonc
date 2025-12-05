@@ -4,6 +4,19 @@
   "compatibility_date": "2025-09-02",
   "compatibility_flags": ["nodejs_compat"],
   "main": "./src/server.ts",
+  "observability": {
+    "enabled": false,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": false,
+      "head_sampling_rate": 1
+    }
+  },
   "env" :{
 		"stage": {
         "vars": {
@@ -20,8 +33,28 @@
 			"services": [
 				{
 					"binding": "BACKEND_SERVICE",
+          //TODO: Change this to the name of your data service
 					"service": "saas-kit-data-service-stage",
 					"remote": true
+				}
+			]
+		},
+    "production": {
+        "vars": {
+          "MY_VAR": "Hello from Cloudflare Production",
+        },
+			"d1_databases": [
+				{
+					"binding": "DB",
+          //TODO: Change this to your database ID
+					"database_id": "941d4c28-260b-4365-9118-8578e603f26b",
+				}
+			],
+			"services": [
+				{
+					"binding": "BACKEND_SERVICE",
+          //TODO: Change this to the name of your data service
+					"service": "saas-kit-data-service-production",
 				}
 			]
 		}

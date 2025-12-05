@@ -31,7 +31,7 @@ pnpm run dev:data-service
 pnpm run deploy:user-application
 ```
 
-### Data Service
+### Data Service (Cloudflare)
 ```bash
 pnpm run deploy:data-service
 ```
@@ -43,4 +43,13 @@ You can also navigate into any sub-application directory and work with it indepe
 ```bash
 cd packages/user-application
 # Open in your preferred IDE
+```
+
+## Getting Started
+
+### Create Databases for Stage and Production
+
+```bash
+pnpm run db:create:stage
+pnpm run db:create:production
 ```

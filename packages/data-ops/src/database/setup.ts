@@ -16,4 +16,4 @@ export function getDb() {
     throw new Error("Database not initialized");
   }
   return db;
-}s
+}

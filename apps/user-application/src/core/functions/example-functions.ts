@@ -1,7 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { exampleMiddlewareWithContext } from "@/core/middleware/example-middleware";
-// import { env } from "cloudflare:workers";
+import { env } from "cloudflare:workers";
 
 const baseFunction = createServerFn().middleware([
   exampleMiddlewareWithContext,
@@ -19,6 +19,6 @@ export const examplefunction = baseFunction
     console.log("Executing example function");
     console.log(`The data passed: ${JSON.stringify(ctx.data)}`);
     console.log(`The context from middleware: ${JSON.stringify(ctx.context)}`);
-    // console.log(`The Cloudflare Worker Environment: ${JSON.stringify(env)}`);
-    return "Function executed successfully";
+    console.log(`The Cloudflare Worker Environment: ${JSON.stringify(env)}`);
+    return "Function executed successfully : " + ctx.data.exampleKey;
   });

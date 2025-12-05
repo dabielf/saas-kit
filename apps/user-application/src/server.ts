@@ -22,7 +22,7 @@ export default {
       },
       adapter: {
         drizzleDb: db,
-        provider: "mysql",
+        provider: "sqlite",
       },
     });
     return handler.fetch(request, {

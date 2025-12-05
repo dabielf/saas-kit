@@ -4,20 +4,20 @@
   "description": "Manage auth, database, schemas, and queries",
   "exports": {
     "./auth/*": {
-      "default": "./dist/auth/*.js",
-      "types": "./dist/auth/*.d.ts"
+      "default": "./dist/src/auth/*.js",
+      "types": "./dist/src/auth/*.d.ts"
     },
     "./database/*": {
-      "default": "./dist/database/*.js",
-      "types": "./dist/database/*.d.ts"
+      "default": "./dist/src/database/*.js",
+      "types": "./dist/src/database/*.d.ts"
     },
     "./zod-schema/*": {
-      "default": "./dist/zod-schema/*.js",
-      "types": "./dist/zod-schema/*.d.ts"
+      "default": "./dist/src/zod-schema/*.js",
+      "types": "./dist/src/zod-schema/*.d.ts"
     },
     "./queries/*": {
-      "default": "./dist/queries/*.js",
-      "types": "./dist/queries/*.d.ts"
+      "default": "./dist/src/queries/*.js",
+      "types": "./dist/src/queries/*.d.ts"
     }
   },
   "scripts": {

@@ -5,11 +5,13 @@
   "scripts": {
     "dev": "vite dev --port 3000 --mode development",
     "build": "vite build",
+    "prod:build": "vite build --mode production",
     "build:check": "vite build && tsc",
     "deploy": "pnpm run build && wrangler deploy",
     "serve": "vite preview",
     "cf-typegen": "wrangler types --env-interface Env --env stage",
-    "stage:deploy": "pnpm run build && wrangler deploy"
+    "stage:deploy": "pnpm run build && wrangler deploy",
+    "prod:deploy": "pnpm run prod:build && wrangler deploy"
   },
   "dependencies": {
     "@polar-sh/sdk": "^0.34.17",

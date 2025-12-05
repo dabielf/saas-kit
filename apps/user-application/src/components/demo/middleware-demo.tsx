@@ -37,7 +37,7 @@ export function MiddlewareDemo() {
   const handleExecute = () => {
     mutation.mutate({
       data: {
-        exampleKey: "exampleValue",
+        exampleKey: inputValue,
       },
     });
   };

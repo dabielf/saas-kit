@@ -1,4 +1,5 @@
 import { createMiddleware } from "@tanstack/react-start";
+import { env } from "cloudflare:workers";
 
 export const exampleMiddlewareWithContext = createMiddleware({
   type: "function",
@@ -7,6 +8,8 @@ export const exampleMiddlewareWithContext = createMiddleware({
   return await next({
     context: {
       data: "Some Data From Middleware",
+      foo: "bar",
+      myVar: env.MY_VAR,
     },
   });
 });

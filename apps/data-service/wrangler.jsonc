@@ -4,6 +4,7 @@
  */
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
+  // TODO: Change this to your service name
   "name": "saas-kit-data-service",
   "main": "./src/index.ts",
   "compatibility_date": "2025-04-01",
@@ -60,6 +61,75 @@
 			// 		"binding": "BUCKET",
 			// 		"bucket_name": "<bucket_name>",
 			// 		"remote": true
+			// 	}
+			// ],
+			// "durable_objects": {
+			// 	"bindings": [
+			// 		{
+			// 			"name": "<durable_object_name>",
+			// 			"class_name": "<durable_object_class_name>"
+			// 		},
+			// 		{
+			// 			"name": "<durable_object_name>",
+			// 			"class_name": "<durable_object_class_name>"
+			// 		}
+			// 	]
+			// },
+			// "migrations": [
+			// 	{
+			// 		"tag": "v1",
+			// 		"new_classes": ["<class_name>"]
+			// 	},
+			// 	{
+			// 		"tag": "v2",
+			// 		"new_sqlite_classes": ["<class_name>"]
+			// 	}
+			// ]
+		},
+    "production": {
+			"d1_databases": [
+				{
+					"binding": "DB",
+          //TODO: Change this to your database ID
+					"database_id": "941d4c28-260b-4365-9118-8578e603f26b",
+				}
+			],
+			// "kv_namespaces": [
+			// 	{
+			// 		"binding": "CACHE",
+			// 		"id": "<kv_id>",
+			// 	}
+			// ],
+			// "queues": {
+			// 	"consumers": [
+			// 		{
+			// 			"queue": "<queue_name>"
+			// 		}
+			// 	],
+			// 	"producers": [
+			// 		{
+			// 			"binding": "QUEUE",
+			// 			"queue": "<queue_name>"
+			// 		}
+			// 	]
+			// },
+			// "workflows": [
+			// 	{
+			// 		"binding": "DESTINATION_EVALUATION_WORKFLOW",
+			// 		"name": "destination-evaluation-workflow",
+			// 		"class_name": "DestinationEvaluationWorkflow"
+			// 	}
+			// ],
+			// "browser": {
+			// 	"binding": "VIRTUAL_BROWSER"
+			// },
+			// "ai": {
+			// 	"binding": "AI"
+			// },
+			// "r2_buckets": [
+			// 	{
+			// 		"binding": "BUCKET",
+			// 		"bucket_name": "<bucket_name>"
 			// 	}
 			// ],
 			// "durable_objects": {
